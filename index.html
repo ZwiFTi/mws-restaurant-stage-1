@@ -35,6 +35,19 @@
     </section>
   </main>
 
+<!-- ServiceWorker -->
+  <script>
+    if (!navigator.serviceWorker) {
+    } else {
+      navigator.serviceWorker.register('js/sw/index.js').then(function() {
+        console.log('Registration worked!');
+      }).catch(function() {
+        console.log('Registration failed!');
+      });
+    }
+
+  </script>
+
   <script type="application/javascript" charset="utf-8" src="js/dbhelper.js"></script>
   <script type="application/javascript" charset="utf-8" src="js/main.js"></script>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKkRJB2lyP-qzaqimMSEabRmKlRQhdqaU&libraries=places&callback=initMap"></script>
